@@ -10,6 +10,7 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     NavbarComponent,
     ListProductsComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
