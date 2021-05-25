@@ -20,3 +20,11 @@
     </figcaption>
   </figure>
 </div>
+<hr />
+<br />
+
+<div class="container">
+  <input type="number" [(ngModel)]="power" placeholder="Ingrese numero base" />Numero base<br/>
+  <input type="number" [(ngModel)]="expo">Exponente
+  <p>{{ power | exponential:expo}}</p>
+</div>

@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  power:number=0;
+  expo:number=2;
+
   constructor() { }
 
   ngOnInit(): void {

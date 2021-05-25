@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ListProductsComponent },
-  {path:"about",component:AboutComponent},
+  { path:"about",component:AboutComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];

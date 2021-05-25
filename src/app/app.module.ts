@@ -11,6 +11,10 @@ import { ListProductsComponent } from './components/list-products/list-products.
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AboutComponent } from './components/about/about.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
+import { ImagesnotfoundDirective } from './directives/imagesnotfound/imagesnotfound.directive';
+
 
 
 @NgModule({
@@ -21,7 +25,10 @@ import { AboutComponent } from './components/about/about.component';
     ListProductsComponent,
     HomeComponent,
     PageNotFoundComponent,
-    AboutComponent
+    AboutComponent,
+    CartComponent,
+    ExponentialPipe,
+    ImagesnotfoundDirective,
   ],
   imports: [
     BrowserModule,

@@ -14,9 +14,14 @@ import { Product } from 'src/app/interfaces/product';
   styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent implements OnInit {
+
+  discount:number = 10;
+
   @Input() product: Product; //Recibe lo que le manda el padre.
 
   @Output() productAddCart = new EventEmitter<Product>();
+
+  currentDate : Date = new Date()
 
   constructor() {
     console.log('Constructor');
@@ -43,9 +48,6 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
-    //Ideal para apagar peticiones abiertas.
     console.log("Sere destruido");
   }
 
