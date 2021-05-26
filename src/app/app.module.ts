@@ -14,7 +14,10 @@ import { AboutComponent } from './components/about/about.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { ImagesnotfoundDirective } from './directives/imagesnotfound/imagesnotfound.directive';
-
+import { HighlightDirective } from './directives/highlight/highlight.directive';
+import { ContactComponent } from './components/contact/contact.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { SwiperModule } from 'swiper/angular';
 
 
 @NgModule({
@@ -29,11 +32,15 @@ import { ImagesnotfoundDirective } from './directives/imagesnotfound/imagesnotfo
     CartComponent,
     ExponentialPipe,
     ImagesnotfoundDirective,
+    HighlightDirective,
+    ContactComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

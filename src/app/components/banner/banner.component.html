@@ -1,0 +1,11 @@
+<swiper class="mySwiper"
+[slidesPerView]="1"
+[spaceBetween]="50"
+(swiper)="onSwiper($event)"
+(slideChange)="onSlideChange()"
+[navigation]="true"
+>
+<ng-template swiperSlide *ngFor="let banner of bannerImages">
+    <img class="image-banner" [src]="banner" alt="">
+</ng-template>
+</swiper>
