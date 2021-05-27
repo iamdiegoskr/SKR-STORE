@@ -1,6 +1,8 @@
 <div class="card-item">
     <i class="far fa-heart icon-heart"></i>
-    <img [src]="product.image" alt="" appImagesnotfound/>
+    <a [routerLink]="['/products',product.id]">
+        <img [src]="product.image" alt="" appImagesnotfound/>
+    </a>
     <div class="card-information">
         <h2>{{ product.title}}</h2>
         <p>{{product.description}}</p>

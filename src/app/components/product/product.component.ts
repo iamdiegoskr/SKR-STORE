@@ -24,31 +24,30 @@ export class ProductComponent implements OnInit {
   currentDate : Date = new Date()
 
   constructor() {
-    console.log('Constructor');
+    // console.log('Constructor');
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
     //Add '${implements OnChanges}' to the class.
-    console.log('ngOnChanges');
-    console.log(changes);
+    // console.log('ngOnChanges');
+    // console.log(changes);
   }
 
   //Se ejecuta solo una vez, cuando el componente ya fue puesto en pantalla
   ngOnInit(): void {
     //Aqui se recomienda llamar a los servicios de datos.
-    console.log("ngOnInit");
+    // console.log("ngOnInit");
 
   }
 
   ngDoCheck(): void {
     //Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.
-    //Add 'implements DoCheck' to the class.
-    console.log("ngDoCheck")
+    // console.log("ngDoCheck")
   }
 
   ngOnDestroy(): void {
-    console.log("Sere destruido");
+    // console.log("Sere destruido");
   }
 
   addCart() {

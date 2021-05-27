@@ -18,6 +18,7 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { ContactComponent } from './components/contact/contact.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { SwiperModule } from 'swiper/angular';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { SwiperModule } from 'swiper/angular';
     HighlightDirective,
     ContactComponent,
     BannerComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
