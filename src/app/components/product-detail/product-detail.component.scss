@@ -1,0 +1,62 @@
+section.detail{
+    width: 100%;
+    height: calc(100vh - 98.96px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-detail{
+    position: relative;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
+    grid-template-rows: 500px;
+    margin: 0 120px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 6px -4px #b4b5b2;
+}
+
+.card-detail img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.detail-info{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.detail-info h2{
+    font-size: 3em;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.start-fill,.start-empty{
+    color: #ffb328;
+    font-size: 2em;
+}
+
+.btn-buy{
+    width: 70%;
+}
+
+.icon-back{
+    font-size: 3em;
+    color: #2685c9;
+}
+
+.icon-back:hover{
+    color: #136199;
+}
+
+.btn-back{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}

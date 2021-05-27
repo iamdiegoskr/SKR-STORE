@@ -1,1 +1,22 @@
-<p>product-detail works!</p>
+<section class="detail">
+    <div class="card-detail">
+        <img [src]="product.image" alt="" />
+        <div class="detail-info">
+            <div>
+                    <h2>{{ product.title }}</h2>
+                    <p>{{ product.description }}</p>
+                    <p>
+                        <i class="fas fa-star start-fill"></i>
+                        <i class="fas fa-star start-fill"></i>
+                        <i class="fas fa-star start-fill"></i>
+                        <i class="fas fa-star start-fill"></i>
+                        <i class="far fa-star start-empty"></i>
+                    </p>
+            </div>
+            <button type="button" class="btn btn-outline-dark btn-buy"> Buy now</button>
+        </div>
+        <a class="btn-back" routerLink="/products">
+            <i class="fas fa-arrow-circle-left icon-back"></i>
+        </a>
+    </div>
+</section>
