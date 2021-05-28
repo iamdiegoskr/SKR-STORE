@@ -64,7 +64,7 @@ export class ProductsService {
     return this.products;
   }
 
-  getProductById(id:string){
+  getProductById(id:string):Product{
     return this.products.find(product => product.id==id);
   }
 

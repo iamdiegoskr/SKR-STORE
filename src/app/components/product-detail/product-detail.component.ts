@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import {take} from 'rxjs/operators'
+import { Color } from 'src/app/interfaces/colors';
 import { Product } from 'src/app/interfaces/product';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -11,8 +12,10 @@ import { ProductsService } from 'src/app/services/products.service';
   styleUrls: ['./product-detail.component.scss'],
 })
 export class ProductDetailComponent implements OnInit {
-  id: number;
+
+  id: string;
   product:Product;
+
 
   constructor(private route: ActivatedRoute,
               private service:ProductsService
@@ -26,8 +29,14 @@ export class ProductDetailComponent implements OnInit {
 
   }
 
-  getProduct(id:number){
-    this.product=this.service.getProductById(id.toString())
+  getProduct(id:string){
+    this.product=this.service.getProductById(id)
     console.log(this.product)
   }
+
+  changeColor(color:String){
+    console.log("new color is : " + color);
+  }
+
+
 }

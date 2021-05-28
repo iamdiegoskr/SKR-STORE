@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+    <mat-label>Seleccione un color</mat-label>
+    <mat-select [(ngModel)]="selectedColor" (selectionChange)="changeColor($event.value)">
+        <mat-option *ngFor="let color of colors" [value]="color.value">
+            {{color.viewValue}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>

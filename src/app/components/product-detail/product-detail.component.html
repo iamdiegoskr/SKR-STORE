@@ -1,5 +1,12 @@
+<div class="not-found-product" *ngIf="!product">
+    <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Ups error, no pudimos encontrar el producto!</strong>
+        <a routerLink="/products" class="alert-link"> ver otros productos</a>
+    </div>
+</div>
 <section class="detail">
-    <div class="card-detail">
+    <div class="card-detail" *ngIf="product"><!--Si producto esta definido muestrelo si no, muestre un error-->
         <img [src]="product.image" alt="" />
         <div class="detail-info">
             <div>
@@ -12,6 +19,7 @@
                         <i class="fas fa-star start-fill"></i>
                         <i class="far fa-star start-empty"></i>
                     </p>
+                    <app-select-option-color (newValueSelect)="changeColor($event)"></app-select-option-color>
             </div>
             <button type="button" class="btn btn-outline-dark btn-buy"> Buy now</button>
         </div>

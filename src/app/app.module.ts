@@ -19,6 +19,12 @@ import { ContactComponent } from './components/contact/contact.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { SwiperModule } from 'swiper/angular';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
+import { SelectOptionColorComponent } from './components/material/select/select-option-color/select-option-color.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+
 
 
 @NgModule({
@@ -37,12 +43,17 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     ContactComponent,
     BannerComponent,
     ProductDetailComponent,
+    SelectOptionColorComponent,
+    LayoutComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    SwiperModule
+    SwiperModule,
+    BrowserAnimationsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
