@@ -3,9 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import { ListProductsComponent } from './components/list-products/list-products.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+
 
 const routes: Routes = [
   {
@@ -15,8 +14,9 @@ const routes: Routes = [
       { path: 'home',
         loadChildren:()=> import('./components/home/home.module').then(m => m.HomeModule)
       },
-      { path: 'products', component: ListProductsComponent },
-      { path: 'products/:id', component: ProductDetailComponent },
+      { path: 'products',
+        loadChildren:()=> import('./components/products/products.module').then(m=> m.ProductsModule)
+      },
       { path: 'about', component: AboutComponent },
       { path: 'contact', component: ContactComponent },
     ],
