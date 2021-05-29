@@ -51,7 +51,7 @@ export class ProductsService {
     },
     {
       id: '7',
-      image: 'assets/images/stickers1.png',
+      image: 'assets/images/stickers8.png',
       title: 'Stickers',
       price: 8000,
       description: 'bla bla bla bla bla',

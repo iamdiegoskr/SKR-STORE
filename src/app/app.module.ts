@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CartComponent } from './components/cart/cart.component';
-import { ImagesnotfoundDirective } from './directives/imagesnotfound/imagesnotfound.directive';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { LayoutComponent } from './components/layout/layout.component';
 import { SharedModule } from './shared/shared.module';
@@ -22,7 +21,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     PageNotFoundComponent,
     CartComponent,
-    ImagesnotfoundDirective,
     HighlightDirective,
     LayoutComponent
   ],
