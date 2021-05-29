@@ -3,8 +3,7 @@ import { Color } from 'src/app/interfaces/colors';
 
 @Component({
   selector: 'app-select-option-color',
-  templateUrl: './select-option-color.component.html',
-  styleUrls: ['./select-option-color.component.scss']
+  templateUrl: './select-option-color.component.html'
 })
 export class SelectOptionColorComponent implements OnInit {
 
