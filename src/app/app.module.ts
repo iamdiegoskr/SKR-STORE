@@ -11,7 +11,6 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { CartComponent } from './components/cart/cart.component';
 import { ImagesnotfoundDirective } from './directives/imagesnotfound/imagesnotfound.directive';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
-import { ContactComponent } from './components/contact/contact.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './components/home/home.module';
@@ -25,7 +24,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CartComponent,
     ImagesnotfoundDirective,
     HighlightDirective,
-    ContactComponent,
     LayoutComponent
   ],
   imports: [

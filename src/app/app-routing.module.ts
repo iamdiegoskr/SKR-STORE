@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './components/contact/contact.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
@@ -19,7 +18,9 @@ const routes: Routes = [
       { path: 'about',
         loadChildren:()=> import('./components/about/about.module').then(m=>m.AboutModule)
       },
-      { path: 'contact', component: ContactComponent },
+      { path: 'contact',
+        loadChildren:()=> import('./components/contact/contact.module').then(m=>m.ContactModule)
+      },
     ],
   },
   { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
