@@ -3,7 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import {take} from 'rxjs/operators'
 import { Product } from 'src/app/interfaces/product';
-import { ProductsService } from 'src/app/services/products.service';
+import { ProductsService } from 'src/app/core/services/products/products.service';
 
 @Component({
   selector: 'app-product-detail',
