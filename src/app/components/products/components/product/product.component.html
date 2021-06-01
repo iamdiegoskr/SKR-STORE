@@ -1,16 +1,17 @@
 <div class="card-item">
     <i class="far fa-heart icon-heart"></i>
-    <a [routerLink]="['/products',product.id]">
-        <img [src]="product.image" alt="" appImagesnotfound/>
-    </a>
-    <div class="card-information">
-        <h2>{{ product.title}}</h2>
-        <p>{{product.description}}</p>
-        <p>{{ product.price | currency:'COP '}}</p>
-        <p>{{currentDate | date}}</p>
-    </div>
-    <div class="card-buttons">
-        <button type="button" class="btn btn-outline-success btn-add-cart" (click)="addCart()" >Add to cart<i class="fas fa-cart-plus icon-cart"></i></button>
+    <img [src]="product.image" alt="" appImagesnotfound/>
+    <div class="card-info-container">
+        <div class="card-information">
+            <h2>{{ product.title}}</h2>
+            <p>{{product.description}}</p>
+            <p>{{ product.price | currency:'COP '}}</p>
+            <p>{{currentDate | date}}</p>
+        </div>
+        <div class="card-buttons">
+            <button type="button" class="btn-detail btn-base" (click)="navigateItemDetail(product.id)">Ver detalle</button>
+            <button type="button" class="btn-add-cart btn-base" (click)="addCart()" >Add to cart<i class="fas fa-cart-plus icon-cart"></i></button>
+        </div>
     </div>
     <span class="discount" *ngIf="product.price>=50000">-{{discount}}%</span>
 </div>

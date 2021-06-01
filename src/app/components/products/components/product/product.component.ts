@@ -8,6 +8,8 @@ import {
 } from '@angular/core';
 import { Product } from 'src/app/interfaces/product';
 
+import {Router} from '@angular/router'
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -23,7 +25,7 @@ export class ProductComponent implements OnInit {
 
   currentDate : Date = new Date()
 
-  constructor() {
+  constructor(private route:Router) {
     // console.log('Constructor');
   }
 
@@ -52,5 +54,9 @@ export class ProductComponent implements OnInit {
 
   addCart() {
     this.productAddCart.emit(this.product);
+  }
+
+  navigateItemDetail(idProduct:string){
+    this.route.navigate(['/products',idProduct])
   }
 }
