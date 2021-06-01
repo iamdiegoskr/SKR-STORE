@@ -143,3 +143,59 @@
 .btn-send:hover{
     background: #056b9b;
 }
+
+@media screen and (max-width: 1200px) {
+    /* Selectors and styles affecting screens UP TO 979px (Desktop) */
+    .container-contact .contact-info,
+    .container-contact .contact-form{
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 979px) {
+    /* Selectors and styles affecting screens UP TO 979px (Desktop) */
+    .container-contact .contact-info{
+        padding: 16px;
+    }
+
+    .container-contact .contact-form{
+        padding: 18px;
+    }
+
+    .btn-send{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 879px) {
+    /* Selectors and styles affecting screens UP TO 979px (Desktop) */
+
+    .section-contact{
+        height: auto;
+    }
+
+    .container-contact{
+        width: 100%;
+        display: block;
+        border-radius: 0;
+    }
+
+    .contact-form{
+        border-radius: 12px;
+    }
+
+    .container-contact .contact-info,
+    .container-contact .contact-form{
+        width: 100%;
+    }
+
+    .contact-social{
+        justify-content: center;
+    }
+
+    .contact-info{
+        text-align: center;
+    }
+}
+
