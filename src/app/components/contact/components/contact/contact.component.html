@@ -1,3 +1,61 @@
 <section class="section-contact">
-    keloke
+    <div class="container-contact">
+        <div class="contact-info">
+            <div class="contact-info-main">
+                <h2>Contactenos</h2>
+                <p class="contact-description">Puede contactarse con nosotros a traves de nuestras lineas telefonicas o via correo electronico, si 
+                    desea puede dejarnos tu correo y nos pondremos en contacto contigo.
+                </p>
+            </div>
+            <div class="contact-location">
+                <div class="call-container">
+                    <i class="fas fa-phone-alt icon-call"></i>
+                    <p>+0123 456 789</p>
+                </div>
+                <div class="email-container">
+                    <i class="fas fa-envelope icon-email"></i>
+                    <p>skrstore@gmail.com</p>
+                </div>
+                <div class="address-container">
+                    <i class="fas fa-map-marker-alt icon-address"></i>
+                    <p>Carrera 77 # 97 Limonar 2, Medellin</p>
+                </div>
+            </div>
+            <div class="contact-social">
+                <div class="social-facebook">
+                    <i class="fab fa-facebook-f icon-facebook"></i>
+                </div>
+                <div class="social-twitter">
+                    <i class="fab fa-twitter icon-twitter"></i>
+                </div>
+                <div class="social-instagram">
+                    <i class="fab fa-instagram icon-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form class="form">
+                <p class="title-name">Tu nombre</p>
+                <mat-form-field appearance="fill" class="name-form">
+                    <mat-label>Tu nombre</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <p class="title-email">Email</p>
+                <mat-form-field appearance="fill" class="email-form">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <p>Cuentanos</p>
+                <mat-form-field hintLabel="Max 100 characters" appearance="fill" class="message-form">
+                    <mat-label>Mensaje</mat-label>
+                    <input matInput #input maxlength="100" placeholder="Escribe aqui">
+                    <mat-hint align="end">{{input.value?.length || 0}}/100</mat-hint>
+                </mat-form-field>
+                <div class="container-button">
+                    <button type="button" class="btn-send">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </section>

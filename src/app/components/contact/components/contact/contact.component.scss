@@ -1,4 +1,145 @@
 .section-contact{
     width: 100%;
     height: calc(100vh - 98.96px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-contact{
+    width: 80%;
+    height: auto;
+    background: #02044a;
+    display: flex;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.container-contact .contact-info{
+    width: 60%;
+}
+
+.container-contact .contact-form{
+    width: 40%;
+    padding: 40px;
+}
+
+.container-contact .contact-info{
+    padding: 16px 60px 16px 16px;
+}
+
+.contact-info-main{
+    margin-bottom: 40px;
+}
+
+.contact-info h2{
+    color: #fff;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.contact-info .contact-description{
+    color: #cacaca;
+    font-size: .8em;
+}
+
+.contact-form{
+    background: #fff;
+    border-radius: inherit;
+}
+
+.call-container,
+.email-container,
+.address-container{
+    display: flex;
+    margin-bottom: 28px;
+    padding: 12px 8px;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all .2s ease;
+
+    p{
+        margin:initial;
+        font-size: .8em;
+    }
+
+}
+
+.call-container:hover,
+.email-container:hover,
+.address-container:hover{
+    border: 1px solid #2642c9;
+    border-radius: 8px;
+    background: #05085abf;
+}
+
+
+.icon-call,
+.icon-email,
+.icon-address{
+    font-size: 1.6em;
+    color: #0991d0;
+    margin-right: 12px;
+}
+
+.contact-location{
+    margin-bottom: 60px;
+}
+
+.contact-social{
+    display: flex;
+}
+
+.contact-social>*{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    padding: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2em;
+    transition: all .4s ease;
+}
+
+.contact-social>*:hover{
+    background: #0991d0;
+}
+
+.icon-facebook,
+.icon-twitter,
+.icon-instagram{
+    color: white;
+    font-size: 1.4em;
+}
+
+//FORMS
+
+.name-form,
+.email-form,
+.message-form{
+    width: 100%;
+    color: rgb(29, 29, 29);
+}
+
+.container-button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-send{
+    background: #0991d0;
+    border: none;
+    padding: 8px 40px;
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 38px;
+    display: block;
+}
+
+.btn-send:hover{
+    background: #056b9b;
 }

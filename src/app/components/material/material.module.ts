@@ -4,6 +4,8 @@ import { SelectOptionColorComponent } from './select/select-option-color/select-
 
 
 import {MatSelectModule} from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from "@angular/material/form-field";
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -13,10 +15,14 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports:[
-    SelectOptionColorComponent
+    SelectOptionColorComponent,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }
