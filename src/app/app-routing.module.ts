@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
@@ -16,6 +17,9 @@ const routes: Routes = [
         loadChildren:()=> import('./components/products/products.module').then(m=> m.ProductsModule)
       },
       { path: 'about',
+        canActivate:[
+          AuthGuard
+        ],
         loadChildren:()=> import('./components/about/about.module').then(m=>m.AboutModule)
       },
       { path: 'contact',
