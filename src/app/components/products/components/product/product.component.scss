@@ -59,10 +59,16 @@ img{
     background: #eaeaea;
     color: #838383;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.icon-see{
+    margin-right: 6px;
 }
 
 .btn-detail:hover{
-    background: #0991d03d;
+    background: #cecdcd;
 }
 
 .discount{

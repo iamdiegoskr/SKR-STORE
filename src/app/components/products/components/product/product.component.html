@@ -9,7 +9,9 @@
             <p>{{currentDate | date}}</p>
         </div>
         <div class="card-buttons">
-            <button type="button" class="btn-detail btn-base" (click)="navigateItemDetail(product.id)">Ver detalle</button>
+            <button type="button" class="btn-detail btn-base" (click)="navigateItemDetail(product.id)">
+                <mat-icon aria-hidden="false" class="icon-see">visibility</mat-icon>
+                Ver detalle</button>
             <button type="button" class="btn-add-cart btn-base" (click)="addCart()" >Add to cart<i class="fas fa-cart-plus icon-cart"></i></button>
         </div>
     </div>
