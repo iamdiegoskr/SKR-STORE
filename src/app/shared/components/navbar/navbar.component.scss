@@ -16,3 +16,9 @@
     background: #000;
     color: white;
 }
+
+@media screen and(max-width:992px){
+    .btn-cart{
+        margin: 20px 0px;
+    }
+}

@@ -1,0 +1,29 @@
+.section-footer{
+    background: #384850;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+}
+
+.section-footer h2{
+    color: #fafafa;
+}
+
+.section-footer p{
+    color: #b9b6b6;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.section-footer p:hover{
+    color: white;
+}
+
+.section-footer>*{
+    justify-self: center;
+}
+
+.icon-contact{
+    margin-right: 12px;
+}

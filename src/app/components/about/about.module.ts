@@ -5,6 +5,7 @@ import { AboutRoutingModule } from './about-routing.module';
 import { AboutComponent } from './components/about/about.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     AboutRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ]
 })
 export class AboutModule { }

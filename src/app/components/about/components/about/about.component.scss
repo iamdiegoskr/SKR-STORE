@@ -1,3 +1,63 @@
-.about-container{
-    padding: 40px;
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "about image"
+        "history history";
+    padding: 60px;
+    background: #fff;
+}
+
+.about-us{
+    grid-area: about;
+}
+
+.about h1{
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 4em;
+    text-shadow: 4px 0px 3px #93d4e8;
+    margin-bottom: 24px;
+}
+
+
+
+.about-us p{
+    line-height: 160%;
+    color: #7d7979;
+    font-size: 1.2em;
+}
+
+
+.span-have{
+    color: #2685c9;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.about-image{
+    grid-area: image;
+    justify-self: center;
+}
+
+.about-history{
+    grid-area: history;
+    text-align: center;
+    background: #7fcbef;
+    border-radius: 12px;
+    padding: 18px;
+}
+.about-history h2{
+    color: #384850;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-history p{
+    color: #545454;
+    font-size: 1.2em;
+    letter-spacing: 1.2px;
 }
