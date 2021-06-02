@@ -6,6 +6,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { ImagesnotfoundDirective } from './directives/imagesnotfound/imagesnotfound.directive';
+import { MaterialModule } from '../components/material/material.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ImagesnotfoundDirective } from './directives/imagesnotfound/imagesnotfo
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MaterialModule
   ],
   exports:[
     NavbarComponent,
