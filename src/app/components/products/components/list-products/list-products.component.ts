@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/interfaces/product';
 import { ProductsService } from 'src/app/core/services/products/products.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-products',
@@ -8,13 +9,17 @@ import { ProductsService } from 'src/app/core/services/products/products.service
   styleUrls: ['./list-products.component.scss'],
 })
 export class ListProductsComponent implements OnInit {
-  products: Array<Product> = [];
+  products: Product[] = [];
 
   constructor(private service:ProductsService) {
-    this.products = this.service.getAllProducts();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.service.getAllProducts().subscribe(data=>{
+      console.log(data);
+      this.products = data
+    })
+  }
 
   productAddCart(product:Product){
     console.log(`El producto ${product.title} ha sido agregado al carrito`);

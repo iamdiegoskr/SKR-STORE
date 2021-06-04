@@ -7,7 +7,9 @@
 </div>
 <section class="detail">
     <div class="card-detail" *ngIf="product"><!--Si producto esta definido muestrelo si no, muestre un error-->
-        <img [src]="product.image" alt="" />
+        <div class="detail-image-container">
+            <img [src]="product.image" alt="" appImagesnotfound />
+        </div>
         <div class="detail-info">
             <div>
                     <h2>{{ product.title }}</h2>

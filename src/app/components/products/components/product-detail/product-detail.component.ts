@@ -29,8 +29,10 @@ export class ProductDetailComponent implements OnInit {
   }
 
   getProduct(id:string){
-    this.product=this.service.getProductById(id)
-    console.log(this.product)
+    // this.product=this.service.getProductById(id)
+    this.service.getProductById(id).subscribe(product=>{
+      this.product=product
+    })
   }
 
   changeColor(color:String){

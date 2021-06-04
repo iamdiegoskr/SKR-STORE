@@ -4,8 +4,8 @@
     <div class="card-info-container">
         <div class="card-information">
             <h2>{{ product.title}}</h2>
-            <p>{{product.description}}</p>
-            <p>{{ product.price | currency:'COP '}}</p>
+            <p>{{product.description  | slice:0:100 }}...</p>
+            <p class="price">{{ product.price | currency:'COP '}}</p>
             <p>{{currentDate | date}}</p>
         </div>
         <div class="card-buttons">
