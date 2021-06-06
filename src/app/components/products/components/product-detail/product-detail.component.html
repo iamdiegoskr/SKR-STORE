@@ -24,6 +24,9 @@
                     <app-select-option-color (newValueSelect)="changeColor($event)"></app-select-option-color>
             </div>
             <button type="button" class="btn btn-outline-dark btn-buy"> Buy now</button>
+            <button type="button" class="btn btn-outline-info btn-create" (click)="createNewProduct()" >CREATE</button>
+            <button type="button" class="btn btn-outline-info btn-create" (click)="updateProduct()" >ACTUALIZAR</button>
+            <button type="button" class="btn btn-outline-info btn-create" (click)="deleteProduct()" >ELIMINAR</button>
         </div>
         <a class="btn-back" routerLink="/products">
             <i class="fas fa-arrow-circle-left icon-back"></i>

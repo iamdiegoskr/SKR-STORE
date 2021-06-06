@@ -15,13 +15,17 @@ export class ListProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getAllProducts().subscribe(data=>{
-      console.log(data);
-      this.products = data
-    })
+    this.fetchAllProducts()
   }
 
   productAddCart(product:Product){
     console.log(`El producto ${product.title} ha sido agregado al carrito`);
   }
+
+  fetchAllProducts(){
+    this.service.getAllProducts().subscribe(data=>{
+      this.products = data
+    })
+  }
+
 }
