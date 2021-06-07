@@ -7,39 +7,21 @@ import { MaterialModule } from '../components/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavComponent } from './components/nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
+
 import { DashComponent } from './components/dash/dash.component';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
+
 import { TableComponent } from './components/table/table.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
+
+import { ListProductsComponent } from './components/list-products/list-products.component';
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, DashComponent, TableComponent],
+  declarations: [ProductFormComponent, NavComponent, DashComponent, TableComponent, ListProductsComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatMenuModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule
   ]
 })
 export class AdminModule { }

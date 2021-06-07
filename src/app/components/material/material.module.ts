@@ -13,7 +13,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 @NgModule({
   declarations: [
     SelectOptionColorComponent
@@ -28,7 +36,15 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     MatBadgeModule,
     MatRadioModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   exports:[
     SelectOptionColorComponent,
@@ -40,7 +56,15 @@ import { MatCardModule } from '@angular/material/card';
     MatRadioModule,
     MatCardModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatPaginatorModule,
+    MatSortModule
   ]
 })
 export class MaterialModule { }

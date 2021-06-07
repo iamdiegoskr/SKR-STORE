@@ -1,0 +1,34 @@
+<table mat-table [dataSource]="products" class="mat-elevation-z8">
+    <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let product">{{ product.id }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>PRODUCTO</th>
+        <td mat-cell *matCellDef="let product">{{ product.title }}</td>
+    </ng-container>
+
+    <!-- Price Column -->
+    <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>PRECIO</th>
+        <td mat-cell *matCellDef="let product">{{ product.price }}</td>
+    </ng-container>
+
+    <!-- Actios Column -->
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>ACCIONES</th>
+        <td mat-cell *matCellDef="let product">
+            <button type="button" class="btn-table btn-edit">Editar</button>
+            <button type="button" class="btn-table btn-delete">Eliminar</button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
