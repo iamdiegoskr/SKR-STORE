@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SelectOptionColorComponent } from './select/select-option-color/select-option-color.component';
-
 
 
 import { MatFormFieldModule } from "@angular/material/form-field";
@@ -22,9 +20,18 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+import { SelectOptionColorComponent } from './select/select-option-color/select-option-color.component';
+import { SnackbarComponent } from './snackbar/snackbar.component';
+
+
+
+
 @NgModule({
   declarations: [
-    SelectOptionColorComponent
+    SelectOptionColorComponent,
+    SnackbarComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +51,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatGridListModule,
     MatMenuModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSnackBarModule
   ],
   exports:[
     SelectOptionColorComponent,
@@ -64,7 +72,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatGridListModule,
     MatMenuModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialModule { }
