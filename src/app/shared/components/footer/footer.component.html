@@ -12,8 +12,11 @@
     </div>
     <div class="contact">
         <h2>Contacto</h2>
-        <p><mat-icon class="icon-contact" aria-hidden="false">email</mat-icon>skrstore@gmail.com</p>
-        <p><mat-icon class="icon-contact" aria-hidden="false">phone</mat-icon>+1234 567 89</p>
+        <form class="form-email">
+            <mat-icon class="icon-contact" >email</mat-icon>
+            <input type="text" placeholder="Ingresa tu correo"[formControl]="emailField">
+            <button type="button" class="btn-send-email" [disabled]="!emailField.valid" (click)="sendEmail()">Enviar</button>
+        </form>
     </div>
 </footer>
 

@@ -8,6 +8,8 @@ import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { ImagesnotfoundDirective } from './directives/imagesnotfound/imagesnotfound.directive';
 import { MaterialModule } from '../components/material/material.module';
 
+import {ReactiveFormsModule} from '@angular/forms'
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { MaterialModule } from '../components/material/material.module';
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   exports:[
     NavbarComponent,

@@ -33,7 +33,7 @@ export class ListProductsComponent implements OnInit {
     console.log(id);
     Swal.fire({
       title: 'Estas seguro de eliminarlo?',
-      text: 'Si eliminar el producto, sera eliminado por completo',
+      text: 'Si eliminas el producto, sera eliminado por completo y no habra vuelta atras',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',

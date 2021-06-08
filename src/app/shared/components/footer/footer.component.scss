@@ -26,4 +26,39 @@
 
 .icon-contact{
     margin-right: 12px;
+    color: #b9b9b9;
+}
+
+.contact{
+    width: 100%;
+    text-align: center;
+}
+
+.contact form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact form input{
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    margin-right: 12px;
+}
+
+.btn-send-email{
+    border-radius: 6px;
+    border: none;
+    padding: 8px 12px;
+    background: #378dfc;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-send-email:disabled{
+    background: #aeaeae;
+    color: #dddddd;
 }
