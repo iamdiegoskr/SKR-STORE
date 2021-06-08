@@ -25,6 +25,26 @@ export class ListProductsComponent implements OnInit {
     })
   }
 
+  //Forma 1
+  deleteProduct(id:string){
+    this.service.deleteProduct(id).subscribe(data=>{
+      this.products = this.products.filter(element=> element.id!=id)
+    })
+  }
+
+  deleteProduct2(id:string){
+    this.service.deleteProduct(id).subscribe(productRemoveIsOk=>{
+      if(productRemoveIsOk){
+
+        const indexToRemove = this.products.findIndex(product => product.id == id)
+        this.products.splice(indexToRemove,1)
+        this.products = [...this.products]
+
+      }else{
+        console.log("Error, el producto no pudo ser elimnando.");
+      }
+    })
+  }
 
 
 }

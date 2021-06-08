@@ -1,21 +1,69 @@
 table {
     width: 100%;
+    margin: auto;
 }
 
-.btn-table{
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    margin-right: 4px;
-    padding: 4px 18px;
-    color: white;
+.btn-delete,
+.btn-edit{
+    font-size: 30px;
+    margin-right: 12px;
+    cursor: pointer;
 }
+
 
 .btn-edit{
-    background: #38439d;
+    color: #4a94f7;
 }
 
 .btn-delete{
-    background: #be1e1e;
+    color: #eb2a2a;
 }
 
+tr.mat-header-row {
+    height: 56px;
+    background: #7b1fa2;
+}
+
+tr.mat-header-row th{
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 1.2px;
+    color: #fff;
+}
+
+th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type {
+    padding: 16px;
+}
+
+.section-table-product{
+    padding: 34px;
+}
+
+.actions{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-new-product{
+    margin-bottom: 24px;
+    background: #4a0072;
+    color: white;
+    padding: 8px 20px;
+    display: flex;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.btn-new-product:hover{
+    background: #7b1fa2;
+}
+
+.icon-add{
+    font-size: 1.6em;
+    color: #d9a3ef;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
