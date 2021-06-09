@@ -32,6 +32,9 @@
             <mat-error *ngIf="form.get('price').hasError('price_invalid')">
                 El precio no es <strong>valido</strong>
             </mat-error>
+            <mat-error *ngIf="form.get('price').hasError('required')">
+                Debes ingresar un valor
+            </mat-error>
             <span matPrefix>$&nbsp;</span>
         </mat-form-field>
         <mat-form-field class="example-full-width form-description">
