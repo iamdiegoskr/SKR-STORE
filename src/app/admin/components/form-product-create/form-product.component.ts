@@ -42,4 +42,16 @@ export class FormProductComponent implements OnInit {
     })
   }
 
+  get priceForm(){
+    return this.form.get('price')
+  }
+
+  priceIsEmpty():boolean{
+    return this.priceForm.hasError('required');
+  }
+
+  priceIsOk(){
+    return this.priceForm.hasError('price_invalid')
+  }
+
 }
