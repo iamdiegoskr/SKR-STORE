@@ -13,9 +13,10 @@ import { DashComponent } from './components/dash/dash.component';
 import { TableComponent } from './components/table/table.component';
 
 import { ListProductsComponent } from './components/list-products/list-products.component';
+import { FormProductComponent } from './components/form-product-create/form-product.component';
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, DashComponent, TableComponent, ListProductsComponent],
+  declarations: [ProductFormComponent, NavComponent, DashComponent, TableComponent, ListProductsComponent, FormProductComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
