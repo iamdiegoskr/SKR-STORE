@@ -14,8 +14,17 @@
         <h2>Contacto</h2>
         <form class="form-email">
             <mat-icon class="icon-contact" >email</mat-icon>
-            <input type="text" placeholder="Ingresa tu correo"[formControl]="emailField">
-            <button type="button" class="btn-send-email" [disabled]="!emailField.valid" (click)="sendEmail()">Enviar</button>
+            <mat-form-field class="example-full-width">
+                <input type="email" matInput [formControl]="emailField" placeholder="Ex. skrstore@example.com">
+                <mat-error *ngIf="emailField.hasError('email') && !emailField.hasError('required')">
+                    Porfavor ingrese un email valido
+                </mat-error>
+                <mat-error *ngIf="emailField.hasError('required')">
+                    Correo es <strong>obligatorio</strong>
+                </mat-error>
+            </mat-form-field>
+            <button type="button" class="btn-send-email" [disabled]="emailField.invalid" (click)="sendEmail()">Enviar</button>
+
         </form>
     </div>
 </footer>
