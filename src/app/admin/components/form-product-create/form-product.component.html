@@ -28,6 +28,10 @@
         <mat-form-field floatLabel="always">
             <mat-label>Precio del producto</mat-label>
             <input matInput type="number" formControlName="price" class="example-right-align" placeholder="0">
+            <mat-hint align="start">Debe ser menor a 100.000COP</mat-hint>
+            <mat-error *ngIf="form.get('price').hasError('price_invalid')">
+                El precio no es <strong>valido</strong>
+            </mat-error>
             <span matPrefix>$&nbsp;</span>
         </mat-form-field>
         <mat-form-field class="example-full-width form-description">
