@@ -1,10 +1,11 @@
 section{
-    margin-top: 60px;
+    padding: 80px;
 }
 
 section form{
     position: relative;
-    width: 600px;
+    width: 100%;
+    max-width: 700px;
     background: #ebebeb;
     margin: auto;
     padding: 40px 20px;
@@ -68,4 +69,17 @@ section form{
 
 .btn-create:enabled:hover{
     background: #d1076c;
+}
+
+@media screen and(max-width:620px){
+    section{
+        padding: 40px 18px;
+    }
+}
+
+
+@media screen and(max-width:397px){
+    .form-top {
+        flex-direction: column;
+    }
 }
