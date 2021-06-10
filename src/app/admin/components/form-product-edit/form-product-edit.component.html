@@ -1,0 +1,55 @@
+<section class="edit-product-form">
+    <form action="" [formGroup]="form" (ngSubmit)="saveProduct($event)">
+        <div class="form-top">
+            <mat-form-field class="example-form-field form-id">
+                <mat-label>Ingrese id</mat-label>
+                <input matInput type="text" formControlName="id" #idInput>
+            </mat-form-field>
+            <mat-form-field class="example-form-field form-title">
+                <mat-label>Nombre del producto</mat-label>
+                <input matInput type="text" formControlName="title" #idValue #titleInput>
+                <button *ngIf="titleInput.value" matSuffix mat-icon-button aria-label="Clear" (click)="titleInput.value=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div class="url-image">
+            <mat-form-field class="example-form-field form-image">
+                <mat-label>Ingrese aqui la url de la imagen del producto</mat-label>
+                <input matInput type="text" formControlName="image" #imageInput>
+                <button *ngIf="imageInput.value" matSuffix mat-icon-button aria-label="Clear" (click)="imageInput.value=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <mat-form-field floatLabel="always">
+            <mat-label>Precio del producto</mat-label>
+            <input matInput type="number" formControlName="price" class="example-right-align" placeholder="0">
+            <mat-hint align="start">Debe ser menor a 100.000COP</mat-hint>
+            <mat-error *ngIf="priceIsOk()">
+                El precio no es <strong>valido</strong>
+            </mat-error>
+            <mat-error *ngIf="priceIsEmpty()">
+                Debes ingresar un valor
+            </mat-error>
+            <span matPrefix>$&nbsp;</span>
+        </mat-form-field>
+        <mat-form-field class="example-full-width form-description">
+            <mat-label>Descripcion</mat-label>
+            <input matInput maxlength="100" #description formControlName="description" placeholder="Ex. El producto es elegante...">
+            <button *ngIf="description.value" matSuffix mat-icon-button aria-label="Clear" (click)="description.value=''">
+                <mat-icon>close</mat-icon>
+            </button>
+            <mat-hint align="start"><strong>Claro y preciso en la descripcion</strong> </mat-hint>
+            <mat-hint align="end">{{description.value.length}} / 100</mat-hint>
+            <mat-error *ngIf="description.value.length<20 || description.value.length>100">
+                Debe contener minimo 20 caracteres y maximo 100
+            </mat-error>
+        </mat-form-field>
+        <button class="btn-create" type="submit" [disabled]="form.invalid">Guardar cambios</button>
+        <div class="title-form">
+            <h2>Editar producto</h2>
+            <mat-icon aria-hidden="false" class="icon-edit">edit</mat-icon>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,93 @@
+section{
+    padding: 80px;
+}
+
+section form{
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    background: #ebebeb;
+    margin: auto;
+    padding: 40px 20px;
+    border-radius: 14px;
+    box-shadow: 0px 2px 8px 0px #8d8686;
+}
+
+.form-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-id{
+    width: 30%;
+}
+
+.form-title{
+    width: 65%;
+}
+
+
+.form-image{
+    width: 100%;
+}
+
+.title-form{
+    background: linear-gradient(156deg, #144097 0%, #630d76 88%);
+    position: absolute;
+    height: 40px;
+    top: calc(0% - 20px);
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+
+.title-form h2{
+    font-size: 1.2em;
+    padding: 0 10px;
+    color: #fff;
+    margin: 0;
+}
+
+.form-description{
+    margin-top: 12px;
+    width: 100%;
+}
+
+.btn-create{
+    background: #ff0b85;
+    border: none;
+    margin-top: 28px;
+    padding: 6px 30px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.btn-create:disabled{
+    background: gray;
+    color: white;
+}
+
+.btn-create:enabled:hover{
+    background: #d1076c;
+}
+
+.icon-edit{
+    color: white;
+}
+
+@media screen and(max-width:620px){
+    section{
+        padding: 40px 18px;
+    }
+}
+
+
+@media screen and(max-width:397px){
+    .form-top {
+        flex-direction: column;
+    }
+}

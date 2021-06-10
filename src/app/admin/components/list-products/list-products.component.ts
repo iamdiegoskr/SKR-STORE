@@ -26,8 +26,6 @@ export class ListProductsComponent implements OnInit {
     });
   }
 
-  editProduct() {}
-
   //Forma 1
   deleteProduct(id: string) {
     console.log(id);
