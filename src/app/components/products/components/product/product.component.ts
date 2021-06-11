@@ -9,6 +9,7 @@ import {
 import { Product } from 'src/app/interfaces/product';
 
 import {Router} from '@angular/router'
+import { CartService } from 'src/app/core/services/cart/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -25,7 +26,8 @@ export class ProductComponent implements OnInit {
 
   currentDate : Date = new Date()
 
-  constructor(private route:Router) {
+  constructor(private route:Router,
+              private serviceCart:CartService) {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -42,7 +44,9 @@ export class ProductComponent implements OnInit {
   }
 
   addCart() {
-    this.productAddCart.emit(this.product);
+    // this.productAddCart.emit(this.product);
+    console.log("Añadido al carrito");
+    this.serviceCart.addCart(this.product)
   }
 
   navigateItemDetail(idProduct:string){
