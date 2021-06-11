@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/core/services/cart/cart.service';
 
 import { map } from 'rxjs/operators'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -10,25 +11,14 @@ import { map } from 'rxjs/operators'
 })
 export class NavbarComponent implements OnInit {
 
-  quantity:number = 0;
+  quantity:Observable<number>
 
   constructor(private serviceCart:CartService) {
 
-    // this.serviceCart.cart$.subscribe(products=>{
-    //   console.log("Desde el navbar");
-    //   console.log(products);
-    //   this.quantity = products.length;
-    // })
-
-    this.serviceCart.cart$
+    this.quantity = this.serviceCart.cart$
     .pipe(
       map(products=>products.length)
-    )
-    .subscribe(productsQuantity=>{
-      console.log("Desde el navbar");
-      this.quantity = productsQuantity;
-    })
-
+    );
   }
 
   ngOnInit(): void {
