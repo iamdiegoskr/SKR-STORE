@@ -1,0 +1,29 @@
+.mat-stepper {
+    min-height: calc(100vh - 98.96px);
+}
+table {
+    width: 100%;
+}
+
+.image-order {
+    width: 140px;
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+}
+
+.btn-add,
+.btn-remove{
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+}
+
+.btn-delete{
+    margin-left: 18px;
+}
