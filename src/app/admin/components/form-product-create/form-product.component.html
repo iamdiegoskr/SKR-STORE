@@ -17,13 +17,17 @@
             </mat-form-field>
         </div>
         <div class="url-image">
-            <mat-form-field class="example-form-field form-image">
+            <!-- <mat-form-field class="example-form-field form-image">
                 <mat-label>Ingrese aqui la url de la imagen del producto</mat-label>
                 <input matInput type="text" formControlName="image" #imageInput>
                 <button *ngIf="imageInput.value" matSuffix mat-icon-button aria-label="Clear" (click)="imageInput.value=''">
                     <mat-icon>close</mat-icon>
                 </button>
-            </mat-form-field>
+            </mat-form-field> -->
+            <input type="file" (change)="uploadImage($event)">
+            <figure *ngIf="(image$ | async) as image" class="figure-container">
+                <img [src]="image" alt="image product">
+            </figure>
         </div>
         <mat-form-field floatLabel="always">
             <mat-label>Precio del producto</mat-label>

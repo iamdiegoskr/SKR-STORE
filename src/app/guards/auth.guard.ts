@@ -19,17 +19,6 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-
-    // return this.serviceAuth.hasUser().pipe(
-    //   map(user=>{
-    //     if(!user){// si user no esta definido osea es null
-    //       return this.router.parseUrl('/');
-    //     }else{
-    //       return true;
-    //     }
-    //   })
-    // );
-
     return this.serviceAuth.hasUser().pipe(
       map(user => user? true : this.router.parseUrl('/auth') )
     )
