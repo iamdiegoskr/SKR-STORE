@@ -30,6 +30,7 @@ export class OrderComponent implements OnInit {
       price: number;
       description: string;
       quantity: number;
+      priceTotal:number;
     }[]
   >;
 
@@ -38,16 +39,16 @@ export class OrderComponent implements OnInit {
 
     this.orderProducts$ = this.serviceCart.cart$.pipe(
       map((products) => {
-        const uniqueProducts = products.filter(
-          (product, index, array) =>
+
+        const uniqueProducts = products.filter((product, index, array) =>
             index === array.findIndex((p) => p.id === product.id)
         );
-        const productsWithQuantities = uniqueProducts.map((uniqueProduct) => {
-          const timesRepeated = products.filter(
-            (item) => item.id === uniqueProduct.id
-          ).length;
 
-          return { ...uniqueProduct, quantity: timesRepeated };
+        const productsWithQuantities = uniqueProducts.map((uniqueProduct) => {
+
+          const timesRepeated = products.filter((item) => item.id === uniqueProduct.id).length;
+
+          return { ...uniqueProduct, quantity: timesRepeated, priceTotal: uniqueProduct.price*timesRepeated};
         });
         return productsWithQuantities;
       })

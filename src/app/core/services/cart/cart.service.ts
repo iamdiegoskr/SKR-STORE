@@ -29,10 +29,8 @@ export class CartService {
   constructor() { }
 
   addCart(product:Product){
-    //VALIDAR AQUI SI EL PRODUCTO YA EXISTE
     this.products = [...this.products, product] //Nos evitamos errores de referencia al mismo array,creamos un nuevo estado del arreglo
     this.cart.next(this.products)
-    //Ahora emitinos a los componentes que estan suscritos que hubo un cambio.
   }
 
   removeCart(id:string){
