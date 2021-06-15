@@ -1,0 +1,40 @@
+<div class="container-register">
+    <form action="" class="form-register" [formGroup]="formRegister" (ngSubmit)="createAccount()" >
+        <div class="form-email">
+            <mat-form-field appearance="fill">
+                <mat-label>Ingrese un correo</mat-label>
+                <input matInput placeholder="Example@gmail.com" formControlName="email">
+                <mat-error *ngIf="formRegister.get('email').invalid">{{getErrorMessageEmail()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="form-password">
+            <mat-form-field appearance="fill">
+                <mat-label>Ingrese una contraseña</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" #password  formControlName="password" >
+                <mat-hint>La contraseña debe ser mayor a 8 caracteres.</mat-hint>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="formRegister.get('password').invalid">{{getErrorMessagePassword()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="form-password-repeat">
+            <mat-form-field appearance="fill">
+                <mat-label>Repita la contraseña</mat-label>
+                <input matInput [type]="hideR ? 'password' : 'text'" #passwordRepeat  formControlName="passwordRepeat" >
+                <mat-hint>Ingrese nuevamente la contraseña</mat-hint>
+                <button mat-icon-button matSuffix (click)="hideR = !hideR" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideR">
+                    <mat-icon>{{hideR ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="formRegister.get('passwordRepeat').invalid" >{{getErrorMessagePasswordConfirm()}}</mat-error>
+            </mat-form-field>
+        </div>
+
+        <button type="submit" class="btn-create-account" [disabled]="formRegister.invalid">Crear cuenta</button>
+        <div class="title-register">
+            <h2>Create new user</h2>
+        </div>
+    </form>
+</div>

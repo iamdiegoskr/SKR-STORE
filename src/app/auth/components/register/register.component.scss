@@ -1,0 +1,54 @@
+.container-register{
+    width: 100vw;
+    height: 100vh;
+    background: #132457;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-register{
+    position: relative;
+    width: 420px;
+    background: white;
+    padding: 90px 40px 40px;
+    border-radius: 12px;
+
+}
+
+form mat-form-field{
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+
+.form-register .btn-create-account{
+    background: #378dfc;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: inherit;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-register .btn-create-account:disabled{
+    background: #d9d7d7;
+}
+
+.title-register{
+    position: absolute;
+    background: linear-gradient(90deg, #1780e1 0%, #090979 86%);
+    height: 50px;
+    padding: 0 18px;
+    top: calc(0% - 25px);
+    border-radius: 12px;
+}
+
+.title-register h2{
+    margin: 0;
+    color: white;
+    line-height: 50px;
+}

@@ -24,12 +24,16 @@ const routes: Routes = [
       },
       { path: 'contact',
         loadChildren:()=> import('./components/contact/contact.module').then(m=>m.ContactModule)
-      },
+      }
     ],
   },
   {
     path:'admin',
     loadChildren:()=> import('./admin/admin.module').then(m=>m.AdminModule)
+  },
+  {
+    path:'auth',
+    loadChildren:()=> import('./auth/auth.module').then(m=>m.AuthModule)
   },
   { path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];

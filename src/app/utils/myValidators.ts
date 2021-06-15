@@ -1,4 +1,4 @@
-import { AbstractControl } from "@angular/forms";
+import { AbstractControl,FormGroup } from "@angular/forms";
 
 export class myValidators{
 
@@ -7,7 +7,6 @@ export class myValidators{
      * Si devuelve null es porque no encontro ningun error y el precio es correcto
      */
     static isPriceValid(control:AbstractControl){
-        console.log(control);
         const value = control.value;
         if(value>100000){
             return {price_invalid:true}
@@ -15,5 +14,7 @@ export class myValidators{
             return null
         }
     }
+
+
 
 }
