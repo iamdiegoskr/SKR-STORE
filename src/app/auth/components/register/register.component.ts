@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { myValidators } from 'src/app/utils/myValidators';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -14,26 +15,26 @@ export class RegisterComponent implements OnInit {
   formRegister: FormGroup;
   // patternPass: string = '(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$';
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private serviceAuth: AuthService,
+    private router: Router
+  ) {
     this.formRegister = this.fb.group(
       {
         email: ['', [Validators.required, Validators.email]],
-        password: [
-          '',
-          [
-            Validators.required,
-            Validators.minLength(8)
-          ],
-        ],
+        password: ['', [Validators.required, Validators.minLength(8)]],
         passwordRepeat: ['', [Validators.required]],
       },
-      { validator: this.checkPasswords('password','passwordRepeat')}
+      { validator: this.checkPasswords('password', 'passwordRepeat') }
     );
   }
 
   ngOnInit(): void {}
 
-  get f() { return this.formRegister.controls; }
+  get f() {
+    return this.formRegister.controls;
+  }
 
   get getEmailForm() {
     return this.formRegister.get('email');
@@ -60,7 +61,7 @@ export class RegisterComponent implements OnInit {
       return 'Debe digitar una contraseña';
     }
 
-    return this.getPasswordForm.hasError ? 'Contraseña no valida':'';
+    return this.getPasswordForm.hasError ? 'Contraseña no valida' : '';
   }
 
   getErrorMessagePasswordConfirm() {
@@ -68,27 +69,36 @@ export class RegisterComponent implements OnInit {
       return 'Complete el campo';
     }
 
-    return this.getPasswordConfirm.hasError('mustMatch')? 'Las contraseñas no coinciden':'';
+    return this.getPasswordConfirm.hasError('mustMatch')
+      ? 'Las contraseñas no coinciden'
+      : '';
   }
 
   checkPasswords(controlName: string, matchingControlName: string) {
-
     return (formGroup: FormGroup) => {
       const control = formGroup.controls[controlName];
       const matchingControl = formGroup.controls[matchingControlName];
 
       if (matchingControl.errors && !matchingControl.errors.mustMatch) {
-          return;
+        return;
       }
 
       if (control.value !== matchingControl.value) {
-          matchingControl.setErrors({ mustMatch: true });
+        matchingControl.setErrors({ mustMatch: true });
       } else {
-          matchingControl.setErrors(null);
+        matchingControl.setErrors(null);
       }
+    };
   }
 
+  registerAccount(e: Event) {
+    e.preventDefault();
+    if (this.formRegister.valid) {
+      const valuesForm = this.formRegister.value;
+      this.serviceAuth.createUser(valuesForm.email, valuesForm.password)
+      .then(()=>{
+        this.router.navigate(['/auth'])
+      })
+    }
   }
-
-  createAccount() {}
 }

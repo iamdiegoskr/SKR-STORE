@@ -11,7 +11,7 @@
     position: relative;
     width: 420px;
     background: white;
-    padding: 90px 40px 40px;
+    padding: 60px 40px 40px;
     border-radius: 12px;
 
 }
@@ -38,17 +38,20 @@ form mat-form-field{
     background: #d9d7d7;
 }
 
-.title-register{
-    position: absolute;
-    background: linear-gradient(90deg, #1780e1 0%, #090979 86%);
-    height: 50px;
-    padding: 0 18px;
-    top: calc(0% - 25px);
-    border-radius: 12px;
+.info-form{
+    text-align: center;
 }
 
-.title-register h2{
-    margin: 0;
-    color: white;
-    line-height: 50px;
+.info-form h2{
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #0c1d50;
+    font-weight: bold;
+}
+
+.have-account a{
+    color: #28aafb;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 6px;
 }
