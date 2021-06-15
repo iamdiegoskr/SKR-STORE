@@ -18,4 +18,16 @@ export class AuthService {
     return this.auth.signInWithEmailAndPassword(email,password)
   }
 
+  logout(){
+    return this.auth.signOut();
+  }
+
+  /*
+    * Si responde null, es que no hay un usuario logueado.
+    * Si responde !null, es que hay un usuario logueado
+   */
+  hasUser(){
+    return this.auth.authState;
+  }
+
 }

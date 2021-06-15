@@ -17,9 +17,6 @@ const routes: Routes = [
         loadChildren:()=> import('./components/products/products.module').then(m=> m.ProductsModule)
       },
       { path: 'about',
-        canActivate:[
-          AuthGuard
-        ],
         loadChildren:()=> import('./components/about/about.module').then(m=>m.AboutModule)
       },
       { path: 'contact',
@@ -29,6 +26,9 @@ const routes: Routes = [
   },
   {
     path:'admin',
+    canActivate:[
+      AuthGuard
+    ],
     loadChildren:()=> import('./admin/admin.module').then(m=>m.AdminModule)
   },
   {
