@@ -1,4 +1,4 @@
-<div class="not-found-product" *ngIf="!product">
+<div class="not-found-product" *ngIf="(product | async) == null">
     <div class="alert alert-dismissible alert-danger">
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         <strong>Ups error, no pudimos encontrar el producto!</strong>
@@ -6,7 +6,7 @@
     </div>
 </div>
 <section class="detail">
-    <div class="card-detail" *ngIf="product"><!--Si producto esta definido muestrelo si no, muestre un error-->
+    <div class="card-detail" *ngIf="(product | async) as product"><!--Si producto esta definido muestrelo si no, muestre un error-->
         <div class="detail-image-container">
             <img [src]="product.image" alt="" appImagesnotfound />
         </div>
