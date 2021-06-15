@@ -1,0 +1,71 @@
+.section-login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #378dfc;
+}
+
+.login-container{
+    display: flex;
+    background: white;
+    align-items: center;
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.login-container form{
+    margin-right: 60px;
+}
+
+.login-container figure{
+    width: 100%;
+    margin: 0;
+}
+
+figure img{
+    height: 100%;
+    width: 100%;
+}
+
+.info-login h2{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+form mat-form-field{
+    margin-bottom: 24px;
+}
+
+.btn-login{
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    background: #378dfc;
+    color: white;
+    text-transform: uppercase;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.btn-login:disabled{
+    background: rgb(189, 187, 187);
+}
+
+.btn-login:enabled:hover{
+    background: #0e61cc;
+}
+
+.already-account p{
+    margin: 0;
+}
+
+.already-account a{
+    color: #378dfc;
+}
+
+.already-account{
+    text-align: center;
+}
