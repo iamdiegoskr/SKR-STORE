@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Product } from 'src/app/interfaces/product';
 
 import {BehaviorSubject} from 'rxjs'
+import { orderProducts } from 'src/app/interfaces/order';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,10 @@ import {BehaviorSubject} from 'rxjs'
 export class CartService {
 
   private products:Product[] = [];
-  cart = new BehaviorSubject<Product[]>([])//Observable, flujo de datos en el tiempo
+
+
+  private cart = new BehaviorSubject<Product[]>([])//Observable, flujo de datos en el tiempo
+  private orders = new BehaviorSubject<orderProducts[]>([]);
 
 
   /**
@@ -18,14 +22,29 @@ export class CartService {
    */
 
   cart$ = this.cart.asObservable();
+  orders$ = this.orders.asObservable();
 
 
 
   constructor() { }
 
   addCart(product:Product){
+    //VALIDAR AQUI SI EL PRODUCTO YA EXISTE
     this.products = [...this.products, product] //Nos evitamos errores de referencia al mismo array,creamos un nuevo estado del arreglo
     this.cart.next(this.products)
     //Ahora emitinos a los componentes que estan suscritos que hubo un cambio.
   }
+
+  removeCart(id:string){
+    this.products = this.products.filter(product => product.id!=id);
+    this.cart.next(this.products)
+  }
+
+  incrementOrder(){
+  }
+
+  decrementOrder(){
+  }
+
+
 }

@@ -21,6 +21,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatStepperModule} from '@angular/material/stepper';
 
 import { SelectOptionColorComponent } from './select/select-option-color/select-option-color.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
@@ -52,7 +53,8 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
     MatMenuModule,
     MatPaginatorModule,
     MatSortModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatStepperModule
   ],
   exports:[
     SelectOptionColorComponent,
@@ -73,7 +75,8 @@ import { SnackbarComponent } from './snackbar/snackbar.component';
     MatMenuModule,
     MatPaginatorModule,
     MatSortModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule { }

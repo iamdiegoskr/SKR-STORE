@@ -8,7 +8,9 @@ import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { ImagesnotfoundDirective } from './directives/imagesnotfound/imagesnotfound.directive';
 import { MaterialModule } from '../components/material/material.module';
 
-import {ReactiveFormsModule} from '@angular/forms'
+import {ReactiveFormsModule} from '@angular/forms';
+import { PricetotalPipe } from './pipes/priceTotal/pricetotal.pipe';
+import { GroupproductsPipe } from './pipes/groupProducts/groupproducts.pipe'
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import {ReactiveFormsModule} from '@angular/forms'
     NavbarComponent,
     FooterComponent,
     ExponentialPipe,
-    ImagesnotfoundDirective
+    ImagesnotfoundDirective,
+    PricetotalPipe,
+    GroupproductsPipe
   ],
   imports: [
     CommonModule,
@@ -28,7 +32,9 @@ import {ReactiveFormsModule} from '@angular/forms'
     NavbarComponent,
     FooterComponent,
     ExponentialPipe,
-    ImagesnotfoundDirective
+    ImagesnotfoundDirective,
+    PricetotalPipe,
+    GroupproductsPipe
   ]
 })
 export class SharedModule { }
